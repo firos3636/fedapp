@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fedapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fedapp
+  template:
+    metadata:
+      labels:
+        app: fedapp
+    spec:
+      containers:
+        - name: fedapp
+          image: firosop3636/fedapp:latest   # change to your DockerHub image
+          ports:
+            - containerPort: 5000

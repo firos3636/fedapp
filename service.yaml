@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fedapp-service
+spec:
+  selector:
+    app: fedapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5000
+  type: LoadBalancer
