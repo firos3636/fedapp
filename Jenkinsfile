@@ -3,7 +3,7 @@
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')
-        DOCKER_IMAGE = "firosop3636/fedapp:latest"
+        DOCKER_IMAGE = "firosop3636/fedapp"
     }
 
     stages {
